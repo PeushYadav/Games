@@ -1,0 +1,143 @@
+:root {
+  --primary: #6200EA;
+  --primary-light: #9D46FF;
+  --primary-dark: #0A00B6;
+  --secondary: #FF4081;
+  --background: #121212;
+  --surface: #1E1E1E;
+  --success: #00E676;
+  --locked: #616161;
+  --text-primary: #FFFFFF;
+  --text-secondary: #B0B0B0;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--text-primary);
+  min-height: 100vh;
+}
+
+.header {
+  background-color: var(--surface);
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 28px;
+  font-weight: bold;
+  color: var(--primary-light);
+}
+
+.user-profile {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: var(--primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+
+.progress-section {
+  text-align: center;
+}
+
+.progress-bar {
+  height: 10px;
+  background-color: var(--locked);
+  border-radius: 5px;
+  max-width: 600px;
+  overflow: hidden;
+  margin: 15px auto;
+}
+
+.progress-fill {
+  height: 100%;
+  background-color: var(--primary-light);
+}
+
+.games-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 30px;
+}
+
+.game-card {
+  background-color: var(--surface);
+  border-radius: 15px;
+  overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s;
+  position: relative;
+}
+
+.game-card:hover {
+  transform: translateY(-5px);
+}
+
+.game-image {
+  height: 150px;
+  background-size: cover;
+  background-position: center;
+}
+
+.game-content {
+  padding: 20px;
+}
+
+.difficulty span {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: var(--primary-light);
+}
+
+.difficulty .empty {
+  background-color: var(--locked);
+}
+
+.play-button {
+  background-color: var(--primary);
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 5px;
+}
+
+.locked-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
